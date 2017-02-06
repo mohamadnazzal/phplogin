@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+ </head>
+ <style>
+html, body {
+    height: 100%;
+  }
+	 #maintableposition {
+		height: 100%;
+   	 	width: 100%;
+    	display: table;
+  }
+  	#logintableposition {
+    	vertical-align: middle;
+    	display: table-cell;
+    	height: 100%;
+  }
+  	#tableholder {
+    	margin: 0 auto;
+  }
+	#FormDesign{
+		vertical-align: middle;
+    	height: 100%;
+	}
+	 body{
+		 background-color: lightblue;
+	 }
+</style>
+<body>
+<div class="container" id="FormDesign" >
+<form method="POST" id="FormDesign">
+	<div id="maintableposition">
+<div id="logintableposition">
+<table id="tableholder" >
+	<tr>
+	<td>User Name </td>
+	<td><input type="text" name="username" class="form-control" placeholder="Enter Username"></td>
+	</tr>
+	<tr>
+	<td>Password </td>
+	<td><input type="password" name="userpassword" class="form-control" placeholder="Enter Password">
+</td>
+	</tr>
+	<tr>
+	<td>Login </td>
+	<td><input type="submit" name="userlogin" class=" btn-primary" value="Login"></td>
+	</tr>
+</table>
+</div>
+</div>
+</div>
+	
+</form>
+
+<?php
+	function loginsuccess(){
+				header('Location: http://mohamadnazzal.me/');
+	}
+	function loginfield(){
+				//echo('Please try again');
+				echo '<script language="javascript">';
+				echo 'alert("Please try again")';
+				echo '</script>';
+	}
+	$username='me';
+	$userpassword='123';
+	if(isset($_POST['userlogin']))
+	{
+		if(isset($_POST['username'])&&($_POST['username'])){
+			if(($_POST['username']==$username) && ($_POST['userpassword']==$userpassword)){
+			loginsuccess();
+		}
+		else
+		{
+			loginfield();
+		}}
+		
+		
+	}
+	   
+		
+	
+	
+	
+	
+	?>
+</body>
+</html>
