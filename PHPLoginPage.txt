@@ -1,4 +1,5 @@
 <!-- Done by : Mohamad Nazzal --> 
+<!-- You need WAMP server or AppServ or any server can host a php webpage locally  --> 
 <!doctype html>
 <html>
 <head>
